@@ -1,0 +1,179 @@
+@import url('style.css');
+
+/*-- -------------------------- -->
+<---        Collection          -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #featured-product {
+      padding: var(--sectionPadding);
+      
+    }
+    #featured-product .cs-container {
+      width: 100%;
+      max-width: 80rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+    }
+    #featured-product .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: left;
+      width: 100%;
+      max-width: 31.25rem;
+      /* pushes it to the left */
+      margin-right: auto;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: flex-start;
+    }
+    #featured-product .cs-tag {
+      font-size: 0.8125rem;
+      line-height: 1.5rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      margin: 0 0 1rem 0;
+      padding: 0 0.5rem;
+      color: var(--bodyTextColorWhite);
+      background-color: var(--secondary);
+      display: block;
+    }
+    #featured-product .cs-text {
+      margin-bottom: 1rem;
+    }
+    #featured-product .cs-text:last-of-type {
+      margin-bottom: 2rem;
+    }
+    #featured-product .cs-button-solid {
+      font-size: 1rem;
+      font-family: var(--fontFamily);
+      /* 46px - 56px */
+      line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+      text-decoration: none;
+      font-weight: 700;
+      text-align: center;
+      margin: 0;
+      color: #fff;
+      min-width: 9.375rem;
+      padding: 0 1.5rem;
+      background-color: var(--primary);
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      /* prevents padding from adding to the width */
+      box-sizing: border-box;
+    }
+    #featured-product .cs-button-solid:before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 0%;
+      background: #000;
+      opacity: 1;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: width .3s;
+    }
+    #featured-product .cs-button-solid:hover:before {
+      width: 100%;
+    }
+    #featured-product .cs-card-group {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 16px - 20px */
+      column-gap: clamp(1rem, 3vw, 1.25rem);
+      /* 16px - 40px */
+      row-gap: clamp(1rem, 3vw, 2.5rem);
+    }
+    #featured-product .cs-item {
+      list-style: none;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    #featured-product .cs-picture:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+    #featured-product .cs-picture:hover img {
+      transform: scale(1.2);
+    }
+    #featured-product .cs-link {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    #featured-product .cs-picture {
+      width: 100%;
+      height: 100vw;
+      min-height: 21.25rem;
+      max-height: 25rem;
+      /* 12px - 20px */
+      margin: 0 0 clamp(0.75rem, 2vw, 1.25rem);
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+      transition: background-color 0.3s;
+    }
+    
+    #featured-product .cs-product-name {
+      /* 20px - 25px */
+      font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+      line-height: 1.2em;
+      font-weight: 700;
+      margin: 0 0 0.25rem 0;
+      color: var(--headerColor);
+    }
+    
+    #featured-product .cs-price {
+      font-size: 1rem;
+      line-height: 1.2em;
+      font-weight: 700;
+      margin: 0;
+      color: var(--primary);
+      display: block;
+    }
+  }
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #featured-product .cs-container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #featured-product .cs-card-group {
+      width: 56%;
+      flex-direction: row;
+      align-items: stretch;
+      /* prevents flexbox from squishing it */
+      flex: none;
+    }
+    #featured-product .cs-picture img {
+      width: 80%;
+      transition: transform 0.5s ease-in-out;
+    }
+    #featured-product .cs-link {
+      height: 100%;
+      justify-content: center;
+    }
+    #featured-product .cs-picture {
+      /* 400px - 520px */
+      height: clamp(25rem, 50vw, 32.5rem);
+      min-height: auto;
+      max-height: 100%;
+    }
+  }
+                                  
